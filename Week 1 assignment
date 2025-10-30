@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- SEO-friendly metadata -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ubuntu Connect — Community-powered knowledge</title>
+  <meta name="description" content="Ubuntu Connect is a community-powered platform that shares knowledge, tools, and stories grounded in the spirit of Ubuntu.">
+  <meta name="keywords" content="Ubuntu, community, open-source, knowledge sharing, tools, tutorials">
+  <link rel="canonical" href="https://example.com/">
+  <meta property="og:title" content="Ubuntu Connect — Community-powered knowledge">
+  <meta property="og:description" content="Join a community that learns, builds, and shares together.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.com/">
+  <meta property="og:image" content="https://example.com/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>
+    /* Basic, accessible defaults */
+    :root { color-scheme: light dark; }
+    body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; }
+    header, nav, main, aside, footer { padding: 1rem; }
+    nav a { margin-right: 1rem; }
+    .skip-link {
+      position: absolute; left: -999px; top: -999px;
+    }
+    .skip-link:focus {
+      left: 1rem; top: 1rem; background: #0055ff; color: #fff; padding: .5rem 1rem; border-radius: .25rem;
+    }
+    figure { margin: 0; }
+  </style>
+</head>
+<body>
+  <!-- Accessibility: keyboard users can skip directly to main content -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Semantic header with site identity -->
+  <header role="banner" aria-label="Site header">
+    <div>
+      <h1>Ubuntu Connect</h1>
+      <p>Community-powered knowledge, tools, and stories.</p>
+    </div>
+    <!-- Primary navigation with clear, descriptive links -->
+    <nav aria-label="Primary" role="navigation">
+      <ul>
+        <li><a href="#mission">Mission</a></li>
+        <li><a href="#resources">Resources</a></li>
+        <li><a href="#stories">Stories</a></li>
+        <li><a href="#join">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main content area -->
+  <main id="main" tabindex="-1">
+    <!-- Logical heading hierarchy -->
+    <section id="mission" aria-labelledby="mission-title">
+      <h2 id="mission-title">Our mission</h2>
+      <p>We believe in the principle of Ubuntu—“I am because we are.” Our mission is to make knowledge accessible, amplify community voices, and build tools that help people learn and share.</p>
+      <figure>
+        <img src="https://example.com/community.jpg" alt="Community members collaborating around laptops">
+        <figcaption>Learning together, building together.</figcaption>
+      </figure>
+    </section>
+
+    <section id="resources" aria-labelledby="resources-title">
+      <h2 id="resources-title">Resources</h2>
+
+      <article aria-labelledby="tutorials-title">
+        <h3 id="tutorials-title">Tutorials</h3>
+        <p>Step-by-step guides for learners of all levels, focused on clarity and practical outcomes.</p>
+        <ul>
+          <li><a href="#python-basics">Python basics</a></li>
+          <li><a href="#error-handling">Error handling</a></li>
+          <li><a href="#oop-principles">OOP principles</a></li>
+        </ul>
+      </article>
+
+      <article aria-labelledby="tools-title">
+        <h3 id="tools-title">Tools</h3>
+        <p>Open-source utilities that make it easier to build, document, and share your work.</p>
+        <details>
+          <summary>Accessibility checklist</summary>
+          <ul>
+            <li>Use semantic landmarks: header, nav, main, aside, footer.</li>
+            <li>Provide alt text for meaningful images.</li>
+            <li>Ensure keyboard navigation and visible focus states.</li>
+            <li>Use labels and aria attributes where helpful.</li>
+          </ul>
+        </details>
+      </article>
+    </section>
+
+    <section id="stories" aria-labelledby="stories-title">
+      <h2 id="stories-title">Stories</h2>
+
+      <article aria-labelledby="kenya-title">
+        <h3 id="kenya-title">Community highlights from Kiambu</h3>
+        <p>Local meetups, mentorship programs, and shared projects that embody collaboration and respect.</p>
+        <time datetime="2025-10-31">Updated October 31, 2025</time>
+      </article>
+
+      <article aria-labelledby="open-source-title">
+        <h3 id="open-source-title">Open-source wins</h3>
+        <p>Contributions that improved documentation quality, testing coverage, and onboarding experiences.</p>
+      </article>
+    </section>
+
+    <section id="join" aria-labelledby="join-title">
+      <h2 id="join-title">Join the community</h2>
+      <p>Sign up to receive updates, contribute guides, or join a local study group.</p>
+      <!-- Accessible form -->
+      <form action="/subscribe" method="post" aria-describedby="subscribe-help">
+        <p id="subscribe-help">We’ll send occasional updates. You can unsubscribe at any time.</p>
+
+        <fieldset>
+          <legend>Subscription details</legend>
+
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required aria-required="true">
+
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" autocomplete="email" required aria-required="true">
+
+          <label for="region">Region</label>
+          <select id="region" name="region">
+            <option value="kiambu">Kiambu</option>
+            <option value="nairobi">Nairobi</option>
+            <option value="other">Other</option>
+          </select>
+
+          <div role="group" aria-labelledby="preferences-title">
+            <p id="preferences-title">Preferences</p>
+            <label>
+              <input type="checkbox" name="pref_tutorials" aria-label="Receive tutorials">
+              Tutorials
+            </label>
+            <label>
+              <input type="checkbox" name="pref_events" aria-label="Receive event updates">
+              Events
+            </label>
+            <label>
+              <input type="checkbox" name="pref_tools" aria-label="Receive tool announcements">
+              Tools
+            </label>
+          </div>
+        </fieldset>
+
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+
+    <!-- Complementary content -->
+    <aside aria-label="Related links">
+      <h2>Related links</h2>
+      <ul>
+        <li><a href="#code-of-conduct">Community code of conduct</a></li>
+        <li><a href="#docs">Documentation guidelines</a></li>
+        <li><a href="#contribute">How to contribute</a></li>
+      </ul>
+    </aside>
+  </main>
+
+  <!-- Semantic footer with contact and legal -->
+  <footer role="contentinfo" aria-label="Site footer">
+    <section aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+      <address>
+        <p>Email: <a href="mailto:hello@example.com">hello@example.com</a></p>
+        <p>Location: Kamenu Ward, Kiambu, Kenya</p>
+      </address>
+    </section>
+
+    <section aria-labelledby="legal-title">
+      <h2 id="legal-title">Legal</h2>
+      <p>&copy; 2025 Ubuntu Connect. All rights reserved.</p>
+      <p><a href="#privacy">Privacy policy</a> · <a href="#terms">Terms of use</a></p>
+    </section>
+  </footer>
+
+  <!-- Helper script: announce content changes to screen reader users -->
+  <div aria-live="polite" aria-atomic="true" class="sr-only" hidden></div>
+</body>
+</html>
